@@ -22,6 +22,7 @@ jobs:
     - name: Run Tests
       run: |
         cd build
+        copy Release\WinCompatShim.dll tests\Release\
         ctest -C Release --output-on-failure
     
     - name: Upload Artifacts
